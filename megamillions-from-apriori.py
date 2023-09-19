@@ -43,6 +43,19 @@ for _, row in data.iterrows():
             number = int(number)
             if 1 <= number <= max_number:  # Check if the number is within the valid range
                 cumulative_frequency[number].append((date, number_frequency[number]))
+                
+#Changes made by Daniel Hernandez as part of Simple Software Design challenge
+#Calculate the average probability of 57-75 for years they were included in
+for every year where probability of 57-75 != nill
+    for i from 57-75
+        count += 1
+        totalProb += probability of ball i
+    avgProb = totalProb/count
+for every year where probability of 57 == nill
+    include avgProb in data set for 57-75
+    for all numbers != 57-75
+        adjust probabilities to account for the new enitries
+    
 
 # Calculate the total number of draws in the previous 1 year
 total_draws_1_year = data[data['date'] >= one_year_ago]['date'].count()
